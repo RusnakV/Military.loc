@@ -1,0 +1,53 @@
+.brand-logo {
+    margin-left: 3.5%;
+
+}
+.nav-wrapper > img{
+    height: 50px;
+    width: 50px;
+    margin: 7px;
+}
+.main-nav{
+    background-color: #3d673e;
+}
+.link-active{
+    background-color: rgba(0,0,0,0.1);
+}
+.military-green{
+    background-color: #6bb76c
+}
+.military-red {
+    background-color: #e02c35;
+}
+.military-text-red{
+    color: #e02c35;
+}
+.military-red:hover {
+    background-color: #ec626f;
+}
+.military-input-weapons{
+    margin-left: 22% !important;
+}
+.tabs .tab a {
+color: rgb(18, 93, 0);
+}
+.machines-container{
+    padding: 0 5%;
+}
+input:focus{
+    outline: none;
+}
+input[type="submit"]{
+    cursor: pointer !important;
+    height: 100%;
+    width: 100%;
+}
+/*======================   Modal  ====================*/
+#add-modal{
+    position: absolute;
+    top: 20%;
+    right: 3%;
+}
+#modal1{
+    width: 30%;
+}
