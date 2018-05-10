@@ -53,19 +53,31 @@ class Weapons
     }
 
     public static function listWeaponsTypes(){
-        $DB = Db::getConnection();
-        $query = $DB->query("SELECT * FROM type_of_weapon");
-        $query ->setFetchMode(PDO::FETCH_ASSOC);
-        return $query ->fetchAll();
-    }
+    $DB = Db::getConnection();
+    $query = $DB->query("SELECT * FROM type_of_weapon");
+    $query ->setFetchMode(PDO::FETCH_ASSOC);
+    return $query ->fetchAll();
+}
 
-    public static function addNewWeapon($name, $type){
+    public static function addNewWeapon($name,$model,$year_of_manufacture, $caliber, $rate_of_fire,$range, $count, $type,$base_id){
         $db = Db::getConnection();
-        $query = $db->prepare("INSERT INTO weapons (name, weapon_type_id) VALUES (:name, :type)");
+        $query = $db->prepare("INSERT INTO weapons (name, model, year_of_manufacture, caliber, rate_of_fire, range_fire, count_weapons, weapon_type_id, military_base_weapons_id) VALUES (:name, :model, :year_of_manufacture, :caliber, :rate_of_fire,:range, :count, :type, :base_id)");
         $query->bindParam(":name", $name, PDO::PARAM_STR);
+        $query->bindParam(":model", $model,PDO::PARAM_STR);
+        $query->bindParam(":year_of_manufacture", $year_of_manufacture,PDO::PARAM_STR);
+        $query->bindParam(":caliber", $caliber,PDO::PARAM_STR);
+        $query->bindParam(":rate_of_fire", $rate_of_fire,PDO::PARAM_STR);
+        $query->bindParam(":range", $range,PDO::PARAM_STR);
+        $query->bindParam(":count", $count,PDO::PARAM_STR);
         $query->bindParam(":type", $type, PDO::PARAM_STR);
+        $query->bindParam(":base_id", $base_id, PDO::PARAM_STR);
         $query->execute();
         return true;
+    }
+
+    public static function fakeInsert(){
+        $db = Db::getConnection();
+        $query = $db->query("INSERT INTO weapons (name, model, year_of_manufacture, caliber, rate_of_fire, range_fire, count_weapons, weapon_type_id, military_base_weapons_id) VALUES ('fdfd', 'fdfd', 'fdfd', 'fdfd', 'fdfd','fdfd', 'fdfd', '1', '1')");
     }
 
     public static function deleteWeapon($id){

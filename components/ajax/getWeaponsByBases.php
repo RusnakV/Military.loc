@@ -26,12 +26,12 @@ if(isset($_POST['base'])){
             <td><?=$weapon['name']?></td>
             <td><?=$weapon['model']?></td>
             <td><?=$weapon['caliber']?></td>
-            <td><?=$weapon['range']?></td>
+            <td><?=$weapon['range_fire']?></td>
             <td><?=$weapon['rate_of_fire']?></td>
             <td><?=$weapon['year_of_manufacture']?></td>
-            <td><?=$weapon['count']?></td>
-            <td>
-                <a class="waves-effect waves-light btn-small military-red">Видалити</a>
+            <td><?=$weapon['count_weapons']?></td>
+            <td >
+                <a weapon-id="<?=$weapon['id']?>" class="waves-effect waves-light btn-small military-red delete-weapon">Видалити</a>
                 <a class="waves-effect waves-light btn-small">Редагувати</a>
             </td>
         </tr>

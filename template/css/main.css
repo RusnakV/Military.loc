@@ -50,4 +50,6 @@ input[type="submit"]{
 }
 #modal1{
     width: 30%;
+    height: 750px;
+    max-height: 1200px;
 }

@@ -15,11 +15,10 @@
             <tr>
                 <th>Name</th>
                 <th>Model</th>
-                <th>Caliber</th>
-                <th>Range</th>
-                <th>Rate of fire</th>
                 <th>Year of manufacture</th>
-                <th>Count</th>
+                <th>Caliber</th>
+                <th>Rate of fire</th>
+                <th>Range</th>
                 <th>Operations</th>
             </tr>
             </thead>
@@ -29,12 +28,11 @@
                 <tr>
                     <td><?=$weapon['name']?></td>
                     <td><?=$weapon['model']?></td>
-                    <td><?=$weapon['caliber']?></td>
-                    <td><?=$weapon['range']?></td>
-                    <td><?=$weapon['rate_of_fire']?></td>
                     <td><?=$weapon['year_of_manufacture']?></td>
-                    <td><?=$weapon['count']?></td>
-                    <td>
+                    <td><?=$weapon['caliber']?></td>
+                    <td><?=$weapon['rate_of_fire']?></td>
+                    <td><?=$weapon['range_fire']?></td>
+                    <td class="operations">
                         <a weapon-id="<?=$weapon['id']?>" class="waves-effect waves-light btn-small military-red delete-weapon">Видалити</a>
                         <a class="waves-effect waves-light btn-small">Редагувати</a>
                     </td>
@@ -49,11 +47,10 @@
             <tr>
                 <th>Name</th>
                 <th>Model</th>
-                <th>Caliber</th>
-                <th>Range</th>
-                <th>Rate of fire</th>
                 <th>Year of manufacture</th>
-                <th>Count</th>
+                <th>Caliber</th>
+                <th>Rate of fire</th>
+                <th>Range</th>
                 <th>Operations</th>
             </tr>
             </thead>
@@ -63,11 +60,10 @@
                 <tr>
                     <td><?=$automatic['name']?></td>
                     <td><?=$automatic['model']?></td>
-                    <td><?=$automatic['caliber']?></td>
-                    <td><?=$automatic['range']?></td>
-                    <td><?=$automatic['rate_of_fire']?></td>
                     <td><?=$automatic['year_of_manufacture']?></td>
-                    <td><?=$automatic['count']?></td>
+                    <td><?=$automatic['caliber']?></td>
+                    <td><?=$automatic['rate_of_fire']?></td>
+                    <td><?=$automatic['range_fire']?></td>
                     <td>
                         <a weapon-id="<?=$automatic['id']?>" class="waves-effect waves-light btn-small military-red delete-weapon">Видалити</a>
                         <a class="waves-effect waves-light btn-small">Редагувати</a>
@@ -84,11 +80,10 @@
             <tr>
                 <th>Name</th>
                 <th>Model</th>
-                <th>Caliber</th>
-                <th>Range</th>
-                <th>Rate of fire</th>
                 <th>Year of manufacture</th>
-                <th>Count</th>
+                <th>Caliber</th>
+                <th>Rate of fire</th>
+                <th>Range</th>
                 <th>Operations</th>
             </tr>
             </thead>
@@ -98,13 +93,12 @@
                 <tr>
                     <td><?=$carabine['name']?></td>
                     <td><?=$carabine['model']?></td>
-                    <td><?=$carabine['caliber']?></td>
-                    <td><?=$carabine['range']?></td>
-                    <td><?=$carabine['rate_of_fire']?></td>
                     <td><?=$carabine['year_of_manufacture']?></td>
-                    <td><?=$carabine['count']?></td>
+                    <td><?=$carabine['caliber']?></td>
+                    <td><?=$carabine['rate_of_fire']?></td>
+                    <td><?=$carabine['range_fire']?></td>
                     <td>
-                        <a class="waves-effect waves-light btn-small military-red">Видалити</a>
+                        <a weapon-id="<?=$carabine['id']?>" class="waves-effect waves-light btn-small military-red delete-weapon">Видалити</a>
                         <a class="waves-effect waves-light btn-small">Редагувати</a>
                     </td>
                 </tr>
@@ -119,11 +113,10 @@
             <tr>
                 <th>Name</th>
                 <th>Model</th>
-                <th>Caliber</th>
-                <th>Range</th>
-                <th>Rate of fire</th>
                 <th>Year of manufacture</th>
-                <th>Count</th>
+                <th>Caliber</th>
+                <th>Rate of fire</th>
+                <th>Range</th>
                 <th>Operations</th>
             </tr>
             </thead>
@@ -133,13 +126,12 @@
                 <tr>
                     <td><?=$rockets['name']?></td>
                     <td><?=$rockets['model']?></td>
-                    <td><?=$rockets['caliber']?></td>
-                    <td><?=$rockets['range']?></td>
-                    <td><?=$rockets['rate_of_fire']?></td>
                     <td><?=$rockets['year_of_manufacture']?></td>
-                    <td><?=$rockets['count']?></td>
+                    <td><?=$rockets['caliber']?></td>
+                    <td><?=$rockets['rate_of_fire']?></td>
+                    <td><?=$rockets['range_fire']?></td>
                     <td>
-                        <a class="waves-effect waves-light btn-small military-red">Видалити</a>
+                        <a weapon-id="<?=$rockets['id']?>" class="waves-effect waves-light btn-small military-red delete-weapon">Видалити</a>
                         <a class="waves-effect waves-light btn-small">Редагувати</a>
                     </td>
                 </tr>
@@ -174,11 +166,10 @@
             <tr>
                 <th>Name</th>
                 <th>Model</th>
-                <th>Caliber</th>
-                <th>Range</th>
-                <th>Rate of fire</th>
                 <th>Year of manufacture</th>
-                <th>Count</th>
+                <th>Caliber</th>
+                <th>Rate of fire</th>
+                <th>Range</th>
                 <th>Operations</th>
             </tr>
             </thead>
@@ -188,13 +179,13 @@
                 <tr>
                     <td><?=$artillery['name']?></td>
                     <td><?=$artillery['model']?></td>
-                    <td><?=$artillery['caliber']?></td>
-                    <td><?=$artillery['range']?></td>
-                    <td><?=$artillery['rate_of_fire']?></td>
                     <td><?=$artillery['year_of_manufacture']?></td>
-                    <td><?=$artillery['count']?></td>
-                    <td>
-                        <a class="waves-effect waves-light btn-small military-red">Видалити</a>
+                    <td><?=$artillery['caliber']?></td>
+                    <td><?=$artillery['rate_of_fire']?></td>
+                    <td><?=$artillery['range_fire']?></td>
+
+                    <td id="operations">
+                        <a weapon-id="<?=$artillery['id']?>" class="waves-effect waves-light btn-small military-red delete-weapon">Видалити</a>
                         <a class="waves-effect waves-light btn-small">Редагувати</a>
                     </td>
                 </tr>
@@ -209,21 +200,54 @@
     <div id="modal1" class="modal">
         <form autocomplete="off" action="../../components/form/addWeapon.php" method="post">
         <div class="modal-content">
-            <h4>Modal Header</h4>
+            <h5>Додати озброєння</h5>
                 <div class="row">
                     <div class="input-field col s12">
                         <input name="name" id="last_name" type="text" class="validate">
-                        <label for="last_name">Last Name</label>
+                        <label for="last_name">Назва</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="model" id="model" type="text" class="validate">
+                        <label for="model">Модель</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="year_of_manufacture" id="year" type="text" class="validate">
+                        <label for="year">Рік виготовлення</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="caliber" id="caliber" type="text" class="validate">
+                        <label for="caliber">Калібер</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="rate_of_fire" id="rate_of_fire" type="text" class="validate">
+                        <label for="rate_of_fire">Скорострільність</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="range" id="range" type="text" class="validate">
+                        <label for="range">Дальність</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="count" id="count" type="text" class="validate">
+                        <label for="count">Кількість</label>
                     </div>
 
                     <div class="input-field col s12">
                         <select name="weaponType">
-                            <option value="" disabled selected>Choose your option</option>
+                            <option value="" disabled selected>Виберіть тип зброї</option>
                             <?foreach ($weapons_type as $type):?>
                                 <option value="<?=$type['id']?>"><?=$type['weapons_type']?></option>
                             <?endforeach;?>
                         </select>
-                        <label>Materialize Select</label>
+
+                    </div>
+                    <div class="input-field col s12">
+                        <select name="base_id">
+                            <option value="" disabled selected>Виберіть військову частину</option>
+                            <?foreach ($military_bases_list as $base_id):?>
+                                <option value="<?=$base_id['id']?>"><?=$base_id['name']?></option>
+                            <?endforeach;?>
+                        </select>
+
                     </div>
                 </div>
         </div>

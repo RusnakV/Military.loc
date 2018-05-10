@@ -23,18 +23,18 @@ if(isset($_POST['base'])){
         </tr>
         </thead>
         <tbody>
-        <?foreach ($listMachines as $weapon):?>
+        <?foreach ($listMachines as $machine):?>
             <tr>
-                <td><?=$weapon['name']?></td>
-                <td><?=$weapon['model']?></td>
-                <td><?=$weapon['cannon']?></td>
-                <td><?=$weapon['armor']?></td>
-                <td><?=$weapon['crew_number']?></td>
-                <td><?=$weapon['appointment']?></td>
-                <td><?=$weapon['year_of_manufacture']?></td>
-                <td><?=$weapon['count']?></td>
+                <td><?=$machine['name']?></td>
+                <td><?=$machine['model']?></td>
+                <td><?=$machine['cannon']?></td>
+                <td><?=$machine['armor']?></td>
+                <td><?=$machine['crew_number']?></td>
+                <td><?=$machine['appointment']?></td>
+                <td><?=$machine['year_of_manufacture']?></td>
+                <td><?=$machine['count_machines']?></td>
                 <td>
-                    <a class="waves-effect waves-light btn-small military-red">Видалити</a>
+                    <a machine-id="<?=$machine['id']?>" class="waves-effect waves-light btn-small military-red delete-machine">Видалити</a>
                     <a class="waves-effect waves-light btn-small">Редагувати</a>
                 </td>
             </tr>

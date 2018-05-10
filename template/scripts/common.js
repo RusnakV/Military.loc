@@ -35,10 +35,27 @@ $(document).ready(function(){
             }
         });
     });
+    // Select workers by bases (AJAX)
+    $("#military-workers-progress").hide();
+    $("#select-workers-by-base").on('change',function () {
+        var base_id = $("#select-workers-by-base").val();
+        $.ajax({
+            url: '../../components/ajax/getWorkersByBases.php',
+            method: 'post',
+            data: {base: base_id},
+            beforeSend: function () {
+                $("#military-workers-progress").show();
+            },
+            success: function (data) {
+                $("#military-workers-progress").hide();
+                $("#military-bases-workers").html(data);
+            }
+        });
+    });
     // Modal toggle
     $('.modal').modal();
     // Delete weapon
-    $(".delete-weapon").click(function () {
+    $(document).on('click','a.delete-weapon',function () {
         var id = $(this).attr("weapon-id");
         var el = $(this).parent().parent();
         $.ajax({
@@ -50,6 +67,37 @@ $(document).ready(function(){
                 el.fadeOut().remove();
                 M.toast({html: '<p class="military-text-red">Зброя була видалена</p>'});
             }
-        })
+        });
+    });
+
+    // Delete machine
+    $(document).on('click','a.delete-machine',function () {
+        var id = $(this).attr("machine-id");
+        var el = $(this).parent().parent();
+        $.ajax({
+            url: "../../components/ajax/deleteMachine.php",
+            method: "post",
+            data: {machine_id: id},
+            dataType: "text",
+            success: function () {
+                el.fadeOut().remove();
+                M.toast({html: '<p class="military-text-red">Техніка була видалена</p>'});
+            }
+        });
+    });
+    // Delete worker
+    $(document).on('click','a.delete-worker',function () {
+        var id = $(this).attr("worker-id");
+        var el = $(this).parent().parent();
+        $.ajax({
+            url: "../../components/ajax/deleteWorker.php",
+            method: "post",
+            data: {worker_id: id},
+            dataType: "text",
+            success: function () {
+                el.fadeOut().remove();
+                M.toast({html: '<p class="military-text-red">Дані було видалено</p>'});
+            }
+        });
     });
 });
